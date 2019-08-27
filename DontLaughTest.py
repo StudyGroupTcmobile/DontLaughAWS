@@ -10,8 +10,8 @@ cap = cv2.VideoCapture(CAMERA_ID)
 
 # AWS rekogintionAPIの設定
 rekognition = boto3.client('rekognition',
-                           aws_access_key_id='',
-                           aws_secret_access_key='',
+                           aws_access_key_id='AKIARSX7YFJS2YTHJLS4',
+                           aws_secret_access_key='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',
                            region_name='us-east-1',
                            )
 
