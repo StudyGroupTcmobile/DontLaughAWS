@@ -10,11 +10,15 @@ from mutagen.mp3 import MP3 as mp3
 CAMERA_ID = 0  # 端末のカメラのID(デオフォルトは0)
 cap = cv2.VideoCapture(CAMERA_ID)
 
+# AWS情報の読込
+f = open('credentials.json', 'r')
+aws_info = json.load(f)
+
 # APIクライアント作成
 rekognition = boto3.client('rekognition',
-                           aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'],
-                           aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'],
-                           region_name=os.environ['REGION_NAME'],
+                           aws_access_key_id=aws_info['aws_access_key_id'],
+                           aws_secret_access_key=aws_info['aws_secret_access_key'],
+                           region_name=aws_info['region_name'],
                            )
 
 # 表示設定
@@ -28,9 +32,9 @@ fontface = cv2.FONT_HERSHEY_DUPLEX  # フォント
 
 count = 0
 # qが推されるまで実行を続ける
-# while(True):
+while(True):
 # デバッグ用にカウンタを作成
-while (count < 1):
+# while (count < 1):
     
     # フレームをキャプチャ取得
     ret, frame = cap.read()
