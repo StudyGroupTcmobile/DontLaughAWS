@@ -2,7 +2,6 @@
 import boto3
 import cv2
 import pygame
-import os
 import json
 from mutagen.mp3 import MP3 as mp3
 
@@ -11,8 +10,7 @@ CAMERA_ID = 0  # 端末のカメラのID(デオフォルトは0)
 cap = cv2.VideoCapture(CAMERA_ID)
 
 # AWS情報の読込
-f = open('credentials.json', 'r')
-aws_info = json.load(f)
+aws_info = json.load(open('credentials.json', 'r'))
 
 # APIクライアント作成
 rekognition = boto3.client('rekognition',
