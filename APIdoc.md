@@ -1,5 +1,31 @@
 # 資料
 
+## Python基本文法
+【参考】[Python チュートリアル](https://docs.python.org/ja/3/tutorial/index.html)
+### 分岐
+```python
+if 条件:
+    処理
+elif 条件:
+    処理
+else:
+    処理
+```
+
+### for文
+```python
+# for 変数 in データの集合（iterableなオブジェクト）
+# 処理
+# C系の for (int i = 0; i < 10; i++) {}みたいなことをやりたい
+for i in range(0, 10):
+    処理
+```
+
+### 関数
+```python
+def 関数名():
+    処理
+```
 ## Pythonのデータ操作
 
 ### for文
