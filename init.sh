@@ -20,7 +20,23 @@ win() {
 }
 
 mac() {
-    echo $HOME
+    
+    echo "export PATH=/Library/Frameworks/Python.framework/Versions/3.7/bin:$PATH >> ~/.bash_profile"
+    echo export PATH='/Library/Frameworks/Python.framework/Versions/3.7/bin:$PATH' >> ~/.bash_profile
+    source ~/.bash_profile
+
+    echo "alias python=python3 >> ~/.bashrc"
+    echo 'alias python="python3"' >> ~/.bashrc
+    source ~/.bashrc
+
+    set -ex
+
+    pip3 install --upgrade pip \
+                        opencv-python \
+                        pygame \
+                        mutagen \
+                        boto3
+    exec $SHELL -l
 }
 
 case $1 in
