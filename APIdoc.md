@@ -28,13 +28,6 @@ def 関数名():
 ```
 ## Pythonのデータ操作
 
-### for文
-
-```python
-
-for value in values:
-    
-```
 ### 辞書型
 - keyとvalueが組み合わせになったデータの形
 - 一意のkeyを使ってvalueを呼び出すような使い方をする
