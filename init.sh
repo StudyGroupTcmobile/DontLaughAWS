@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/bin/bash[
+
+# sh path/to/init.sh win 
 
 win() {
     echo export PATH=\$HOME/AppData/Local/Programs/Python/Python37/Scripts:\$HOME/AppData/Local/Programs/Python/Python37:\$PATH >> ~/.bashrc
@@ -18,6 +20,9 @@ win() {
 
     exec $SHELL -l
 }
+
+
+# sh path/to/init.sh mac
 
 mac() {
     
