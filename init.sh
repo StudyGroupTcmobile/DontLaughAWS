@@ -1,4 +1,4 @@
-#!/bin/bash[
+#!/bin/bash
 
 # sh path/to/init.sh win 
 
